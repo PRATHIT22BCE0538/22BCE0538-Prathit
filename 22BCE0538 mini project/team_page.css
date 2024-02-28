@@ -1,0 +1,329 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-size: 15pt;
+  font-weight: 700;
+}
+/* team-page */
+body{
+  position: relative;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.menu{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  /* justify-content: center; */
+  align-items: center;
+  position: fixed;
+  height: 120px;
+  top: 20px;
+  right: 20px;
+  left: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.menu1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  position: absolute;
+}
+.left{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 400px;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  border-radius: 10px;
+}  
+.left a:hover{
+  background-color: white;
+  box-shadow:  5px 5px 10px 3px rgba(0,0,0,0.8) ;
+} 
+.left a{
+  color: rgb(0, 0, 0);
+  font-size: 33px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 14px 20px;
+  box-shadow: 5px 5px 10px 3px rgba(0,0,0,0.8) inset;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+}
+.right{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-around;
+  border-radius: 10px;
+  align-items: center;
+  top: 10px;
+  bottom: 10px;
+  right: 10px;  
+}
+.right a{
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 30px;
+  transition: all 0.2s linear;
+}
+@media only screen and (max-width: 740px) {
+  .left
+  {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-right: 60px;
+      top: 10px;
+      left: 10px;
+      bottom: 10px;
+      border-radius: 10px;
+  }
+  .right a{
+      color: rgb(0, 0, 0);
+      font-size: 13px;
+      text-decoration: none;
+      padding: 8px 20px;
+      transition: all 0.2s linear;
+  }
+  .left a{
+      color: rgb(0, 0, 0);
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 10px 16px;
+      box-shadow: 5px 5px 10px 3px rgba(0,0,0,0.8) inset;
+      border-radius: 10px;
+      transition:all 0.2s linear;
+  }
+  section {
+          position: relative;
+          top: 180px;
+          max-width: 500px;
+          margin-left: 60px;
+          padding: 20px;
+          background-color: darkgrey;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+          animation: pulse 10s ease infinite;
+     }
+}
+
+.right a:hover{
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+  border-radius: 10px;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: linear-gradient(375deg, #ffffff, #000000);
+}
+.header-title {
+  color: #ffffff;
+}
+.main-box
+{
+    display: flex;
+}
+.wrapper{
+  height: 400px;
+  width: 320px;
+  position: relative;
+  transform-style: preserve-3d;
+ perspective: 1000px;
+ margin-right: 50px;
+ margin-left: 50px;
+ top: 200px;
+}
+.wrapper .card{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: linear-gradient(375deg, #575757, #ffffff);
+  border-radius: 10px;
+  transform: translateY(0deg);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+}
+.wrapper:hover > .front-face{
+  transform: rotateY(-180deg);
+}
+.wrapper .card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.wrapper .back-face{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+.wrapper:hover > .back-face{
+  transform: rotateY(0deg);
+}
+.wrapper .back-face img{
+  height: 150px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #000000, #ffffff);
+}
+.wrapper .back-face .info{
+  text-align: center;
+}
+.back-face .info .title{
+  font-size: 15pt;
+  font-weight: 500;
+}
+
+/* module-page */
+
+h1
+{
+    position: relative;
+    top: 200px;
+    font-size: 25pt;
+    color: #fff;
+}
+.module
+{
+    position: relative;
+    max-width: 1000px;
+    margin: 100px auto;
+    top: 100px;
+    z-index: -1;
+}
+.container
+{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 0.5s linear forwards;
+    opacity: 0;
+}
+@keyframes movedown
+{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+.container:nth-child(1){
+    animation-delay: 0s;
+}
+.container:nth-child(2){
+    animation-delay: 1s;
+}
+.container:nth-child(3){
+    animation-delay: 2s;
+}
+.container:nth-child(4){
+    animation-delay: 3s;
+}
+.container:nth-child(5){
+    animation-delay: 4s;
+}
+.text-box
+{
+    padding: 20px 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+.left-container
+{
+    left: 0;
+}
+.right-container
+{
+    left: 50%;
+} 
+.container img
+{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+    object-fit: cover;
+}
+.right-container img
+{
+    left: -20px;
+}
+.module::after
+{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 4.5s linear forwards;
+}
+@keyframes moveline
+{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+.left-container-arrow
+{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -14px;
+}
+.right-container-arrow
+{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -14px;
+}
